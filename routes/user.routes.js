@@ -9,7 +9,7 @@ router.post("/signup", (req, res) => {
 
 router.post("/login", passport.authenticate("local"), (req, res) => {
   console.log(req.user);
-  res.send({ success: true, data: "Conor", error: null });
+  res.send({ success: true, data: { username: user.username }, error: null });
 });
 // userFunctions.login(res, req.body.username, req.body.password);
 //   passport.authenticate("local", (err, user, info) => {

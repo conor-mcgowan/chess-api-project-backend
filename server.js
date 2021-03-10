@@ -6,7 +6,7 @@ const session = require("express-session");
 const userRoutes = require("./routes/user.routes");
 const opponentRoutes = require("./routes/opponent.routes");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 app.use(express.static(__dirname + "/build"));
 app.use(bodyParser.json());
