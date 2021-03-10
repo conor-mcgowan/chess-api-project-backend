@@ -19,10 +19,6 @@ app.use("/users", userRoutes);
 
 app.use("/opponents", opponentRoutes);
 
-app.get("/", (req, res) => res.send("This is a server, apparently."));
-
-app.get("*", (req, res) => res.redirect("/"));
-
 app.get("*", (req, res) => {
   res.sendFile("/build/index.html", { root: __dirname + "/" });
 });
