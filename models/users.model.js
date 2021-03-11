@@ -7,7 +7,7 @@ function isInvalid(val, min, max) {
 
 async function signUp(res, username, password) {
   try {
-    if (isInvalid(username, 8, 16) || isInvalid(password, 8, 20)) {
+    if (isInvalid(username, 5, 20) || isInvalid(password, 7, 20)) {
       throw "Invalid Data Provided";
     }
     let [
@@ -35,7 +35,7 @@ async function signUp(res, username, password) {
 
 async function login(res, username, password) {
   try {
-    if (isInvalid(username, 8, 16) || isInvalid(password, 8, 20)) {
+    if (isInvalid(username, 5, 20) || isInvalid(password, 8, 20)) {
       throw "Invalid Data Provided";
     }
     let [

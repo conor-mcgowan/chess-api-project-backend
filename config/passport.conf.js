@@ -11,6 +11,7 @@ function isInvalid(val, min, max) {
 passport.use(
   new LocalStrategy(async function (username, password, done) {
     try {
+      console.log(username);
       if (isInvalid(username, 8, 16) || isInvalid(password, 8, 20)) {
         return done(null, false, "Invalid data provided.");
       }
